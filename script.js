@@ -22,7 +22,7 @@ function initMap() {
           audio: 'audio/rebecca_duncan.mp3'
       },
       {
-          lat: 49.2565, 
+          lat: 49.2713, 
           lng: -123.1394, 
           name: 'Bill Darnell',
           image: 'https://historyofsocialchange.ca/wp-content/uploads/2015/07/bill-darnell.jpeg',

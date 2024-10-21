@@ -10,21 +10,21 @@ function initMap() {
       {
           lat: 49.2764, 
           lng: -123.1444, 
-          name: 'Museum of Vancouver',
-          image: 'https://museumofvancouver.ca/sites/default/files/styles/featured_image/public/2021-10/museum-of-vancouver-exterior.jpg',
+          name: 'Sharon Fortney',
+          image: 'https://images.squarespace-cdn.com/content/v1/58d29e6ccd0f6829bdf2f58f/0fb21d0e-d159-46d2-809d-d91fa9d5f0c0/Sharon+-0073.jpg?format=500w',
           audio: 'audio/museum_of_vancouver.mp3'
       },
       {
           lat: 49.2805, 
           lng: -123.1022, 
-          name: 'Chinatown',
-          image: 'https://www.vancouverchinatown.com/wp-content/uploads/2021/05/Chinatown-Header-2.jpg',
+          name: 'Tsitsayxemaat - Rebecca Duncan',
+          image: 'https://images.squarespace-cdn.com/content/v1/58d29e6ccd0f6829bdf2f58f/e4d2d469-efb5-4037-8933-d7fd3c554cdd/Rebecca-Duncan-1-1024x683.jpg?format=500w',
           audio: 'audio/chinatown.mp3'
       },
       {
           lat: 49.2713, 
           lng: -123.1394, 
-          name: 'Greenpeace',
+          name: 'Bill Darnell',
           image: 'https://historyofsocialchange.ca/wp-content/uploads/2015/07/bill-darnell.jpeg',
           audio: 'audio/greenpeace.mp3'
       }

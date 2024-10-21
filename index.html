@@ -5,99 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talk History Map</title>
     <style>
-        /* Set the height and width for the map */
-        #map {
-            height: 80vh; /* Full viewport height */
-            width: 80%;
-            margin: 20px auto;
-            border-radius: 15px; /* Rounded corners for the map */
-            overflow: hidden; /* Ensure no overflow */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-        }
-
-        /* Body styling */
+        /* General styling for body */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff; /* Light blue background */
-            color: #003366; /* Dark blue text color */
+            background-color: #f7f9fc;
+            color: #003366;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center align content */
-            justify-content: flex-start; /* Align items at the top */
-            height: 100vh; /* Full viewport height */
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
         }
 
-        /* Title styling */
+        /* Sleek and compact header styling */
         h1 {
+            margin: 10px 0; /* Reduced top and bottom margin for less space */
+            font-size: 2.5em; /* Slightly smaller font size */
+            color: #001f3f; /* Dark navy blue */
             text-align: center;
-            margin-top: 20px;
-            font-size: 2.8em; /* Larger font size for the title */
-            color: #003366; /* Dark blue for the title */
+            font-weight: 600; /* Slightly bolder font weight */
+            letter-spacing: 0.5px;
         }
 
-        /* Subtitle styling */
+        /* Subtitle styling with less space */
         h2 {
+            font-size: 1.2em; /* Smaller subtitle size */
+            color: #00509e;
             text-align: center;
-            margin-top: 10px;
-            font-size: 1.3em; /* Slightly larger font size for the subtitle */
-            color: #00509e; /* Slightly lighter blue */
+            font-weight: 400;
+            margin-bottom: 15px; /* Reduced bottom margin */
         }
 
-        /* Button styling */
+        /* Styling for buttons */
         .nav-button {
-            padding: 12px 25px;
+            padding: 10px 20px;
             font-size: 1.1em;
             color: white;
-            background-color: #00509e;
+            background-color: #0077b6;
             border: none;
-            border-radius: 8px;
+            border-radius: 50px;
             cursor: pointer;
-            margin: 10px 0;
+            margin-bottom: 20px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
         .nav-button:hover {
-            background-color: #003366;
+            background-color: #001f3f;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        /* Style for InfoWindows */
-        .info-window {
-            width: 300px; /* Set a width for the InfoWindow */
-            border-radius: 15px; /* Rounded corners */
-            padding: 10px;
-            background-color: #ffffff; /* White background for InfoWindow */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        /* Styling for the map container */
+        #map {
+            height: 75vh;
+            width: 90%;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
         }
 
-        /* Image styling */
-        .info-window img {
-            width: 100%; /* Full width for the image */
-            border-radius: 10px; /* Rounded corners for the image */
-        }
-
-        /* Container for the map and button */
+        /* Container for map and buttons */
         .container {
-            width: 100%;
             text-align: center;
+            width: 100%;
         }
+
+        /* Styling for InfoWindow content */
+        .info-window {
+            max-width: 300px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #f0f8ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-window img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Add responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1em;
+            }
+            .nav-button {
+                padding: 8px 18px;
+                font-size: 1em;
+            }
+            #map {
+                width: 100%;
+                height: 60vh;
+            }
+        }
+
+        /* Importing Google Fonts for a modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
     </style>
-    <!-- Google Maps JavaScript API -->
+    <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_51HnY0i07kxRUfl2agkrohwwDRTmtQY"></script>
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+    <script src="script.js"></script> <!-- Link to your external JS file for map logic -->
 </head>
 <body>
-    <!-- Title and Subtitle -->
+    <!-- Sleek, compact header -->
     <h1>Talk History</h1>
     <h2>by David Eirew</h2>
 
-    <!-- Button to navigate to another page -->
+    <!-- Navigation Button -->
     <a href="about.html" class="nav-button">Learn More About Talk History</a>
 
-    <!-- Map container -->
+    <!-- Map Container -->
     <div class="container">
         <div id="map"></div>
     </div>

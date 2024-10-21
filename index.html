@@ -7,10 +7,12 @@
     <style>
         /* Set the height and width for the map */
         #map {
-            height: 100vh; /* Full viewport height */
-            width: 100%;
+            height: 80vh; /* Full viewport height */
+            width: 80%;
+            margin: 20px auto;
             border-radius: 15px; /* Rounded corners for the map */
             overflow: hidden; /* Ensure no overflow */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
         }
 
         /* Body styling */
@@ -23,7 +25,7 @@
             display: flex;
             flex-direction: column;
             align-items: center; /* Center align content */
-            justify-content: center; /* Center vertically */
+            justify-content: flex-start; /* Align items at the top */
             height: 100vh; /* Full viewport height */
         }
 
@@ -31,7 +33,7 @@
         h1 {
             text-align: center;
             margin-top: 20px;
-            font-size: 2.5em; /* Larger font size for the title */
+            font-size: 2.8em; /* Larger font size for the title */
             color: #003366; /* Dark blue for the title */
         }
 
@@ -39,8 +41,27 @@
         h2 {
             text-align: center;
             margin-top: 10px;
-            font-size: 1.2em; /* Smaller font size for the subtitle */
+            font-size: 1.3em; /* Slightly larger font size for the subtitle */
             color: #00509e; /* Slightly lighter blue */
+        }
+
+        /* Button styling */
+        .nav-button {
+            padding: 12px 25px;
+            font-size: 1.1em;
+            color: white;
+            background-color: #00509e;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 0;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        }
+
+        .nav-button:hover {
+            background-color: #003366;
         }
 
         /* Style for InfoWindows */
@@ -57,14 +78,28 @@
             width: 100%; /* Full width for the image */
             border-radius: 10px; /* Rounded corners for the image */
         }
+
+        /* Container for the map and button */
+        .container {
+            width: 100%;
+            text-align: center;
+        }
     </style>
     <!-- Google Maps JavaScript API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_51HnY0i07kxRUfl2agkrohwwDRTmtQY"></script>
     <script src="script.js"></script> <!-- Link to the JavaScript file -->
 </head>
 <body>
+    <!-- Title and Subtitle -->
     <h1>Talk History</h1>
     <h2>by David Eirew</h2>
-    <div id="map"></div>
+
+    <!-- Button to navigate to another page -->
+    <a href="about.html" class="nav-button">Learn More About Talk History</a>
+
+    <!-- Map container -->
+    <div class="container">
+        <div id="map"></div>
+    </div>
 </body>
 </html>

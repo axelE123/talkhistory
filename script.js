@@ -4,7 +4,11 @@ function initMap() {
       zoom: 14,
       center: { lat: 49.275, lng: -123.1207 } // Coordinates for Vancouver
   });
-
+  const customIcon = {
+    url: 'https://www.iconarchive.com/download/i107260/iconarchive/blue-election/Election-Mic-Outline.1024.png',
+    scaledSize: new google.maps.Size(40, 40), // Scale the image
+    anchor: new google.maps.Point(20, 40), // Center the icon
+};
   // Define locations for markers
   const locations = [
       {
@@ -44,10 +48,7 @@ function initMap() {
           position: { lat: location.lat, lng: location.lng },
           map: map,
           title: location.name,
-          icon: {
-              url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-              scaledSize: new google.maps.Size(32, 32)
-          }
+          icon: customIcon, // Use the custom icon
       });
 
       // Define content for the InfoWindow

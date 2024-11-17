@@ -33,6 +33,13 @@ function initMap() {
           audio: 'audio/bill_darnell.mp3'
       },
       {
+        lat: 49.2679, 
+        lng: -123.149645, 
+        name: 'Grant McDonagh',
+        image: 'https://mail.google.com/mail/u/0?ui=2&ik=a33659397c&attid=0.1&permmsgid=msg-a:r-1869340434111521142&th=19337e24616fac25&view=fimg&fur=ip&permmsgid=msg-a:r-1869340434111521142&sz=s0-l75-ft&attbid=ANGjdJ__sGbS1zq2_kUEDhI2kqaG9if394Yp7Kgvf-yfVwSOk-qQ7xm74oxZ04JenkvHiiAMS-wC3aL2-cv1My_rhFy314JHlTxhDtGugq-7n7cLip9lJSODl0gbec0&disp=emb&realattid=ii_m3kylihh0&zw',
+        audio: 'audio/grant_mcdonagh.mp3'
+    },
+      {
         lat: 49.280390, 
         lng: -123.086920, 
         name: 'Marie Kishchuk',
